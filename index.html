@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactManager</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/icon.png">
+</head>
+<body>
+    <form id="contact-form">
+        <input type="hidden" id="contact-id" />
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" placeholder="John Doe" required/>
+        <label for="contact-phone">Phone number</label>
+        <input type="text" id="contact-phone" placeholder="(00) 90000-0000" required/>
+        <div class="form-btn">
+            <button type="submit" id="save-btn">Save</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+        </div>
+    </form>
+    <ul id="contact-list"></ul>
+    <footer>
+        <p>Made with &lt;3 by <a href="#">Lucas Quinália</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/ui.js"></script>
+</body>
+</html>
