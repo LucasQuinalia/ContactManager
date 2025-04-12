@@ -1,9 +1,24 @@
 {
-    "contacts": [
-        {
-            "id": "2a56",
-            "name": "John Doe",
-            "phone": "11 90000-0000"
-        }
-    ]
+  "contacts": [
+    {
+      "id": "2a56",
+      "name": "John Doe",
+      "phone": "11 90000-0000"
+    },
+    {
+      "id": "b37a",
+      "name": "Lucas",
+      "phone": "11 91111-1111"
+    },
+    {
+      "id": "ce02",
+      "name": "Mom",
+      "phone": "00 90101-0101"
+    },
+    {
+      "id": "7238",
+      "name": "Dad",
+      "phone": "00 90101-0101"
+    }
+  ]
 }
