@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
-    --background-color: #fff;
-    --text-color: #000;
+    --background-color-light: #fff;
+    --text-color-light: #000;
+    --background-color-dark: #191919;
+    --text-color-dark: #fff;
+    --dark-border: #333333;
+    --dark-component: #252525;
+    --dark-text: #9B9B9B;
     --light-grey: #E4E4E4;
     --grey: #6C6C6C;
-    --lighter-slate: #F5F5FF;
     --light-slate: #E1E1FB;
     --slate: #5863D6;
     --light-blue: #DDF0FE;
@@ -34,9 +38,9 @@
 
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color-dark);
     font-family: var(--font-family);
-    color: var(--text-color);
+    color: var(--text-color-dark);
     font-size: 1rem;
 }
 
@@ -51,7 +55,8 @@ p {
     margin: 1rem auto;
     width: 100%;
     padding: 1.5rem;
-    border: 0.125rem solid var(--light-grey);
+    background-color: var(--dark-component);
+    border: 0.125rem solid var(--dark-border);
     border-radius: 1.25rem;
     box-shadow: var(--shadow-soft);
     gap: 0.5rem;
@@ -66,9 +71,11 @@ p {
 
 #contact-form input {
     font-size: 1rem;
-    padding: 0.2rem;
+    padding: 0.25rem;
     border-radius: 0.5rem;
-    border: 0.125rem solid var(--light-grey);
+    color: var(--dark-text);
+    background-color: var(--dark-border);
+    border: 0.125rem solid var(--dark-component);
     transition: 0.25s ease;
 }
 
@@ -100,30 +107,30 @@ p {
 }
 
 #save-btn {
-    background-color: var(--light-green);
-    color: var(--green);
+    background-color: var(--green);
+    color: var(--light-green);
 }
 
 #cancel-btn {
-    background-color: var(--light-red);
-    color: var(--red);
+    background-color: var(--red);
+    color: var(--light-red);
 }
 #save-btn:hover {
-    border: 0.125rem solid var(--green);
+    border: 0.125rem solid var(--light-green);
 }
 
 #cancel-btn:hover {
-    border: 0.125rem solid var(--red);
+    border: 0.125rem solid var(--light-red);
 }
 #save-btn:active {
-    background-color: var(--green);
-    color: var(--light-green);
+    background-color: var(--light-green);
+    color: var(--green);
     transition: 0.1s ease;
 }
 
 #cancel-btn:active {
-    background-color: var(--red);
-    color: var(--light-red);
+    background-color: var(--light-red);
+    color: var(--red);
     transition: 0.1s ease;
 }
 
@@ -143,7 +150,8 @@ p {
     align-items: center;
     width: 100%;
     padding: 1.5rem;
-    border: 0.125rem solid var(--light-grey);
+    background-color: var(--dark-component);
+    border: 0.125rem solid var(--dark-border);
     border-radius: 1.25rem;
     box-shadow: var(--shadow-soft);
     gap: 0.5rem;
@@ -161,12 +169,12 @@ footer {
 
 footer p {
     display: inline-block;
-    color: var(--slate);
+    color: var(--light-slate);
     padding: 0.625rem;
     border-radius: 0.625rem;
-    background-color: var(--light-slate);
+    background-color: var(--slate);
 }
 
 footer a {
-    color: var(--slate);
+    color: var(--light-slate);
 }
