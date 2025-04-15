@@ -59,6 +59,7 @@ const ui = {
 
         const editButton = document.createElement('button')
         editButton.classList.add('edit-btn')
+        editButton.onclick = () => ui.fillContactForm(contact.id)
 
         const editSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
         editSvg.setAttribute('viewBox', '0 0 24 24')
@@ -76,6 +77,13 @@ const ui = {
         li.appendChild(contactPhoneNumber)
         li.appendChild(contactOptions)
         contactList.appendChild(li)
+    },
+
+    async fillContactForm(id) {
+        const contact = await api.getContactById(id)
+        document.getElementById('contact-id').value = contact.id
+        document.getElementById('contact-name').value = contact.name
+        document.getElementById('contact-phone').value = contact.phone
     }
 }
 

@@ -38,6 +38,16 @@ const api = {
             alert('Error deleting contact')
             throw error
         }
+    },
+
+    async editContact(contact) {
+        try {
+            const response = axios.put(`${URL_BASE}/contacts/${contact.id}`, contact)
+            return await response.data
+        } catch {
+            alert('Error editing contact')
+            throw error
+        }
     }
 }
 

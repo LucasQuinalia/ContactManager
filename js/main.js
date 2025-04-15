@@ -11,12 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
 async function submitForm(event) {
     event.preventDefault()
 
+    const contactId = document.getElementById('contact-id').value  
     const contactName = document.getElementById('contact-name').value  
     const contactPhone = document.getElementById('contact-phone').value
 
     try {
-        await api.createContact({ name: contactName, phone: contactPhone })
-        await ui.renderContacts
+        if (contactId) {
+            await api.editContact({ id: contactId, name: contactName, phone: contactPhone })
+        } else {
+            await api.createContact({ name: contactName, phone: contactPhone })
+        }
+        ui.renderContacts
     } catch {
         alert('Error creating new contact')
     }
