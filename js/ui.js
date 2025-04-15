@@ -84,6 +84,11 @@ const ui = {
         document.getElementById('contact-id').value = contact.id
         document.getElementById('contact-name').value = contact.name
         document.getElementById('contact-phone').value = contact.phone
+    },
+
+    resetForm() {
+        document.getElementById('contact-form').reset()
+        document.getElementById('contact-id').value = ''
     }
 }
 
